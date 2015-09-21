@@ -1,0 +1,18 @@
+# ==cast-playlist configuration file==
+#
+# By default, cast-playlist will look for this file in the config folder under the
+# user's home directory (~/.config/cast-playlist/) or in the $XDG_CONFIG_DIRS 
+# (/etc/xdg/cast-playlist). If it can't find a file named config.yml in these default 
+# location, it will look for it in the current working directory. If 
+# config.yml cannot be found in any of the above locations, the program will 
+# abort with an error message explaining the situation.
+
+
+# ==Configuration options==
+
+# Location of the stream2chromecast.py script
+# cast-playlist depends on stream2chromecast to cast videos
+:stream_script: "configure_this!"
+
+# Name of python interpreter (e.g. "python" or "python2")
+:python_interpreter: "python"
