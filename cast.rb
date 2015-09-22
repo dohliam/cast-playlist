@@ -116,14 +116,7 @@ def get_current_item
 end
 
 def chrome_play(file)
-  get_metadata(file)
-  start_time = Time.now
-  `#{@python_interpreter} #{@stream_script} "#{file}"`
-#   quits inexplicaby after video has played for between 60 and 90 secs, so sleep until over:
-  remainder = Time.now - start_time
-  buffer = @seconds - remainder + 15
-  puts "  Video played for a total of #{remainder.to_s} seconds, now sleeping for remaining #{buffer.to_s} seconds..."
-  sleep buffer
+  `#{@python_interpreter} #{@stream_script} -enqueue "#{file}"`
 end
 
 def get_metadata(file)
